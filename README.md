@@ -28,7 +28,7 @@ The goal is to visualize long-term warming trends, perform exploratory data anal
 
 ## Methodology
 1. **Data Collection**:
-   - Monthly global temperature anomaly data was collected from NOAA.
+   - Monthly global temperature anomaly data was collected from NASA.
 3. **Data Cleaning & Preprocessing**:
    - Converted the Year column from YYYY-MM to datetime format.
    - Extracted separate Year and Month fields.
