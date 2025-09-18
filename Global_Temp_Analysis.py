@@ -15,7 +15,7 @@ df_temp.columns = df_temp.columns.str.strip()
 
 # Rename temperature column to 'Mean'
 df_temp = df_temp.rename(columns={
-    'NOAA Land Only Globally averaged Temperature  missing value -999 https://psl.noaa.gov/data/timeseries/month/': 'Mean'
+    'Globally averaged Temperature missing value -999 https://datahub.io/core/global-temp#monthly': 'Mean'
 })
 
 # --- Step 4: Convert Year to datetime ---
@@ -85,4 +85,5 @@ sns.heatmap(heatmap_data, cmap="coolwarm", annot=False, cbar_kws={'label': 'Mean
 plt.title(f"Seasonal Pattern Heatmap (Last 50 Years: {latest_year-49}–{latest_year})", fontsize=18)
 plt.xlabel("Month", fontsize=14)
 plt.ylabel("Year", fontsize=14)
+
 plt.show()
