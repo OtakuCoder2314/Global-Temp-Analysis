@@ -1,56 +1,63 @@
-# 🌡️ Global Temperature Anomaly Analysis
+# 🌡️ Global Temperature Analysis
 
 This project focuses on **time-series analysis of global land-ocean temperature anomalies** using the [DataHub Global Temp dataset](https://datahub.io/core/global-temp).  
 The goal is to visualize long-term warming trends, perform exploratory data analysis (EDA), and derive insights about climate change.
 
 ---
 
-## Dataset
-- Source: [DataHub – Global Land and Ocean Temperature Index](https://datahub.io/core/global-temp)  
-- Coverage: Monthly temperature anomalies (°C), 1880 – Present  
-- Columns:  
-  - `Source` → Dataset origin (GCAG or GISTEMP)  
-  - `Date` → Month and Year  
-  - `Mean` → Temperature anomaly relative to baseline  
+## Dataset  
+
+- **Source:** [DataHub Global Temp dataset](https://datahub.io/core/global-temp)
+- **Coverage:** Monthly global temperature anomalies (°C), 1850 – Present  
+- **Columns:**  
+  - `Source` → Dataset origin (e.g., GCAG)  
+  - `Year` → Year and Month in `YYYY-MM` format  
+  - `Mean` → Monthly global temperature anomaly (relative to baseline)  
 
 ---
 
 ## Objectives
-- Clean and preprocess global temperature datasets.  
-- Detect and visualize **long-term warming trends**.  
-- Analyze **decade-wise averages** to measure acceleration of warming.  
-- Apply **rolling averages** for smoothing trends.  
-- Draw **data-driven conclusions** about climate change.  
+- Clean and preprocess global temperature data for analysis.
+- To visualize long-term trends in global temperature anomalies.
+- To generate smoothed trends using moving averages.
+- Identify seasonal variations in temperature patterns.
+- Interpret findings related to global climate change.
+  
 
 ---
 
 ## Methodology
-1. **Data Preprocessing**  
-   - Converted `Date` to datetime format  
-   - Replaced missing values (`-999`) with NaN  
-   - Filtered data from different sources (GCAG, GISTEMP)  
-
-2. **Exploratory Data Analysis (EDA)**  
-   - Descriptive statistics  
-   - Raw time-series visualization  
-
-3. **Data Visualization**  
-   - Line plots of anomalies over time  
-   - Rolling 12-month averages  
-   - Decade-wise bar charts  
-   - Seasonal boxplots  
-
-4. **Tools Used**  
-   - Python (Pandas, NumPy, Matplotlib, Seaborn, Plotly)  
+1. **Data Collection**:
+   - Monthly global temperature anomaly data was collected from NOAA.
+3. **Data Cleaning & Preprocessing**:
+   - Converted the Year column from YYYY-MM to datetime format.
+   - Extracted separate Year and Month fields.
+   - Handled missing values and ensured data consistency.
+   - Sorted records chronologically.
+4. **Data Analysis**:
+   - Generated line plots of temperature anomalies by source.
+   - Computed 12-month moving averages for smoothing fluctuations.
+   - Created a seasonal heatmap of temperature patterns over the last 50 years.
+5. **Tools & Libraries Used**:
+   - Python, Pandas, Matplotlib, Seaborn. 
    - Jupyter Notebook / Google Colab  
 
 ---
 
-## Results
-- Clear **warming trend** observed, especially after the 1970s.  
-- Rolling averages confirm **consistent global warming acceleration**.  
-- Decade-wise analysis shows recent decades are significantly hotter than earlier periods.  
-- Seasonal patterns reveal anomalies across months but with upward shift in recent years.  
+## Results  
+
+The analysis of the monthly global temperature dataset produced the following key findings:  
+
+- **Long-term Trend:** Global temperatures have shown a steady increase, especially after the mid-20th century.  
+- **Smoothed Analysis:** A 12-month moving average clearly highlights the warming trend, filtering out short-term fluctuations.  
+- **Seasonal Patterns:** Heatmap visualization of the last 50 years indicates consistently warmer temperatures across most months, with recent decades showing more intense warming.  
+
+### Visual Highlights  
+- **Line Plot of Monthly Temperature Anomalies** – Shows fluctuations in global temperature across years.  
+- **12-Month Moving Average Trend** – Demonstrates a clear upward trajectory in global warming.  
+- **Seasonal Heatmap (Last 50 Years)** – Highlights warming patterns across different months and years.  
+
+ **Conclusion:**  
+The results confirm a consistent rise in global temperatures, aligning with scientific consensus on climate change.  
 
 ---
-
