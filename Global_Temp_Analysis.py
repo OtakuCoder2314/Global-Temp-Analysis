@@ -15,7 +15,7 @@ df_temp.columns = df_temp.columns.str.strip()
 
 # Rename temperature column to 'Mean'
 df_temp = df_temp.rename(columns={
-    'Globally averaged Temperature missing value https://datahub.io/core/global-temp#monthly': 'Mean'
+    'Globally averaged Temperature https://datahub.io/core/global-temp#monthly': 'Mean'
 })
 
 # --- Step 4: Convert Year to datetime ---
@@ -87,4 +87,5 @@ plt.xlabel("Month", fontsize=14)
 plt.ylabel("Year", fontsize=14)
 
 plt.show()
+
 
